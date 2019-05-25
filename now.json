@@ -1,0 +1,23 @@
+{
+  "name": "Testing JS",
+  "version": 2,
+  "regions": ["iad1", "cle1"],
+  "builds": [
+    {
+      "src": "*.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/404.html",
+      "status": 404
+    },
+    {
+      "src": "/email",
+      "methods": ["POST"],
+      "dest": "index.js"
+    }
+  ]
+}
